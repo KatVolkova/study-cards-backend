@@ -1,1 +1,2 @@
-web: gunicorn study_cards.wsgi
+web: gunicorn study_cards_backend.wsgi
+
