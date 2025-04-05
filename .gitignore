@@ -3,3 +3,4 @@
 
 # Environment variables file
 .env/
+env.py
