@@ -36,7 +36,7 @@ SECRET_KEY = envir("SECRET_KEY")
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'study-cards-backend-ed31bd4028c1.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'study_cards',
     'dj_rest_auth',               
-    'dj_rest_auth.registration',
     'dj_rest_auth.registration',
     'corsheaders',
 ]
