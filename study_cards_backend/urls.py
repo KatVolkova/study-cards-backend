@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from study_cards.views import test_connection
+from study_cards.views import test_connection, home_view
 
 urlpatterns = [
+    path('', home_view), 
     path('admin/', admin.site.urls),
     path('api/test/', test_connection),
     path('api/auth/', include('dj_rest_auth.urls')),
