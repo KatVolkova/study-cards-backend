@@ -34,10 +34,15 @@ SECRET_KEY = envir("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://study-cards-frontend-2200912dd99e.herokuapp.com',
+]
 
 # Application definition
 
@@ -73,12 +78,18 @@ MIDDLEWARE = [
     
 ]
 
+# CORS_ALLOWED_ORIGINS = [
+#    origin for origin in [
+#      os.environ.get('CLIENT_ORIGIN'),
+#      os.environ.get('CLIENT_ORIGIN_DEV')
+#    ] if origin
+#  ]
+
 CORS_ALLOWED_ORIGINS = [
-   origin for origin in [
-     os.environ.get('CLIENT_ORIGIN'),
-     os.environ.get('CLIENT_ORIGIN_DEV')
-   ] if origin
- ]
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://study-cards-frontend-2200912dd99e.herokuapp.com",
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -121,7 +132,9 @@ else:
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
     
-
+# Email configuration (for development)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
