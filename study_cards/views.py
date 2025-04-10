@@ -1,12 +1,17 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+# study_cards/views.py
 
-def home_view(request):
-    return HttpResponse("Welcome to the Study Cards API!")
+from rest_framework import viewsets, permissions
+from .models import Flashcard
+from .serializers import FlashcardSerializer
 
-@api_view(['GET'])
-def test_connection(request):
-    return Response({"message": "Connection is successful!"})
+
+class FlashcardViewSet(viewsets.ModelViewSet):
+    queryset = Flashcard.objects.all()
+    serializer_class = FlashcardSerializer
+    permission_classes = [permissions.IsAuthenticated]  
+
+    def get_queryset(self):
+        user = self.request.user
+        return Flashcard.objects.filter(owner=user)
+
 
