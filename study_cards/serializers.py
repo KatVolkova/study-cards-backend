@@ -1,6 +1,7 @@
 
 from rest_framework import serializers
 from .models import Flashcard
+from .models import ReviewHistory
 
 
 class FlashcardSerializer(serializers.ModelSerializer):
@@ -8,3 +9,10 @@ class FlashcardSerializer(serializers.ModelSerializer):
         model = Flashcard
         fields = '__all__'
         read_only_fields = ['owner', 'created_at', 'updated_at']
+
+
+class ReviewHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ReviewHistory
+        fields = ['id', 'user', 'date', 'correct', 'total', 'score']
+        read_only_fields = ['user', 'date']
