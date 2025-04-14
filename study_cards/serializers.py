@@ -14,5 +14,5 @@ class FlashcardSerializer(serializers.ModelSerializer):
 class ReviewHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = ReviewHistory
-        fields = ['id', 'user', 'date', 'correct', 'total', 'score']
+        fields = ['id', 'user', 'date', 'correct', 'total', 'score', 'streak']
         read_only_fields = ['user', 'date']

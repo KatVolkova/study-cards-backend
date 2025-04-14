@@ -27,6 +27,6 @@ class ReviewHistory(models.Model):
     correct = models.IntegerField()
     total = models.IntegerField()
     score = models.DecimalField(max_digits=5, decimal_places=2)
-
+    streak = models.IntegerField(default=0)
     def __str__(self):
         return f"{self.user.username} - {self.date.strftime('%Y-%m-%d %H:%M:%S')} - {self.score}%"
