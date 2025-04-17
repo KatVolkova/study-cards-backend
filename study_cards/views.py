@@ -1,6 +1,7 @@
 # study_cards/views.py
 
 from rest_framework import viewsets, generics, permissions
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import Flashcard
 from .serializers import FlashcardSerializer
 from .models import ReviewHistory
@@ -9,7 +10,9 @@ from .serializers import ReviewHistorySerializer
 class FlashcardViewSet(viewsets.ModelViewSet):
     queryset = Flashcard.objects.all()
     serializer_class = FlashcardSerializer
-    permission_classes = [permissions.IsAuthenticated]  
+    permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['topic', 'status', 'next_review_date']
 
     def get_queryset(self):
         return Flashcard.objects.filter(owner=self.request.user)
