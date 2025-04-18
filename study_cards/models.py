@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils import timezone
+
 
 
 class Flashcard(models.Model):
@@ -19,7 +19,7 @@ class Flashcard(models.Model):
     )
     
     # Timestamps
-    next_review_date = models.DateField(default=timezone.now)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
