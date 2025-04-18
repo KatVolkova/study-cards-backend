@@ -1,7 +1,6 @@
 
 from rest_framework import serializers
-from .models import Flashcard
-from .models import ReviewHistory
+from .models import Flashcard, ReviewHistory
 
 
 class FlashcardSerializer(serializers.ModelSerializer):

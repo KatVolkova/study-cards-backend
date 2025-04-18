@@ -9,5 +9,9 @@ router.register(r'flashcards', FlashcardViewSet, basename='flashcard')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('review-history/', ReviewHistoryListCreateView.as_view(), name='review-history'),
+    path(
+        'review-history/',
+        ReviewHistoryListCreateView.as_view(),
+        name='review-history'
+        ),
 ]

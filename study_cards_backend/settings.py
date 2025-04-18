@@ -54,7 +54,6 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -67,11 +66,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'study_cards',
-    'dj_rest_auth',               
+    'dj_rest_auth',
     'dj_rest_auth.registration',
     'corsheaders',
-    'allauth',              
-    'allauth.account',      
+    'allauth',
+    'allauth.account',
     'allauth.socialaccount',
     'django_filters',
 ]
@@ -87,8 +86,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-]
+    ]
 
 # CORS_ALLOWED_ORIGINS = [
 #    origin for origin in [
@@ -114,7 +112,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_PAGINATION_CLASS': (
+        'rest_framework.pagination.LimitOffsetPagination'
+        ),
     'PAGE_SIZE': 5,
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend'
@@ -156,9 +156,6 @@ else:
     DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
-    
-
-
 
 
 # Password validation
@@ -166,16 +163,28 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+            ),
     },
 ]
 
