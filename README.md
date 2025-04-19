@@ -43,9 +43,21 @@ A PostgreSQL provided by Code Institute has been used as relational database.<br
 - ReviewSessions **track** the history of completed study sessions including score and streak.
 
 
+A welcome message is displayed when you first enter the API site.
 
+![Screenshot of welcome message](documentation/welcome_api.png)<br>
 
 ### Future Implementations
+
+- **Spaced Repetition Algorithm:**  
+  Implement intelligent flashcard scheduling based on the user's previous review performance using algorithms like SM-2 (used in Anki) to optimize memory retention.
+
+- **User Statistics API:**  
+  Provide additional API endpoints to deliver detailed analytics to users, such as learning streaks, mastery trends over time, flashcard creation rates, and review success percentages.
+
+- **Decks and Flashcard Grouping:**  
+  Allow users to create multiple decks (collections of flashcards) for better organization. Flashcards could be linked to decks through a ForeignKey, enabling deck-level filtering and review.
+
 
 ## API Endpoints
 
