@@ -23,3 +23,12 @@ Return to the [project name README.md](README.md).
 | Review History Save | POST `/api/review-history/` with review data | 201 Created, record saved in DB | As expected |
 | Review History Read | GET `/api/review-history/` | 200 OK, list of user’s past review sessions | As expected |
 | Unauthorized Access | Try to POST/GET without token | 401 Unauthorized error | As expected |
+
+
+## Bugs
+
+| **Bug Number** | **Description**                                         | **Cause**                                              | **Solution**                                           |
+|----------------|----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| 1              | Registration form failed when missing email field        | Email was marked as required in backend but validation was unclear | Improved serializer error handling and clarified form validation rules |
+| 2              | Login form accepted incorrect credentials silently       | Backend did not return proper error response for wrong credentials | Added error catching and displayed clear authentication error messages |
+| 3              | Flashcards API allowed unauthenticated access             | Missing permission classes on flashcard endpoints       | Applied `IsAuthenticated` permission to FlashcardViewSet to restrict access |

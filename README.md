@@ -82,24 +82,12 @@ The endpoints provided by the StudyCards API are:
 |                                      | PUT         | Update (Update Review Session) |
 |                                      | DELETE      | Delete (Remove Review Session) |
 
-## Bugs
 
-| **Bug Number** | **Description**                                         | **Cause**                                              | **Solution**                                           |
-|----------------|----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
-| 1              | Registration form failed when missing email field        | Email was marked as required in backend but validation was unclear | Improved serializer error handling and clarified form validation rules |
-| 2              | Login form accepted incorrect credentials silently       | Backend did not return proper error response for wrong credentials | Added error catching and displayed clear authentication error messages |
-| 3              | Flashcards API allowed unauthenticated access             | Missing permission classes on flashcard endpoints       | Applied `IsAuthenticated` permission to FlashcardViewSet to restrict access |
 
 
 ## Testing
 
 The app was tested regularly and deployed to Heroku to make sure both local and remote worked the same.
-
-### Python Validator Testing
-
-- All created python files were checked with the [Code Insitute validator - CI Python Linter](https://pep8ci.herokuapp.com/#). <br>
-
-### Manual Testing
 
 The manual tests were conducted to ensure that the API operates smoothly and behaves as intended.
 <b>[Detailed manual testing is located here](/TESTING.md)</b>
