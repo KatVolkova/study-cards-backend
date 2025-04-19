@@ -84,6 +84,12 @@ The endpoints provided by the StudyCards API are:
 
 ## Bugs
 
+| **Bug Number** | **Description**                                         | **Cause**                                              | **Solution**                                           |
+|----------------|----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| 1              | Registration form failed when missing email field        | Email was marked as required in backend but validation was unclear | Improved serializer error handling and clarified form validation rules |
+| 2              | Login form accepted incorrect credentials silently       | Backend did not return proper error response for wrong credentials | Added error catching and displayed clear authentication error messages |
+| 3              | Flashcards API allowed unauthenticated access             | Missing permission classes on flashcard endpoints       | Applied `IsAuthenticated` permission to FlashcardViewSet to restrict access |
+
 
 ## Testing
 
