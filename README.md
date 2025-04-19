@@ -61,10 +61,26 @@ A welcome message is displayed when you first enter the API site.
 
 ## API Endpoints
 
-The endpoints provided by the API are:<br>
+The endpoints provided by the StudyCards API are:
 
-| Endpoint                           | HTTP Method | CRUD Operation |
-|------------------------------------|-------------|----------------|
+| Endpoint                            | HTTP Method | CRUD Operation |
+|-------------------------------------|-------------|----------------|
+| /api/auth/registration/             | POST        | Create (User Registration) |
+| /api/auth/login/                    | POST        | Create (User Login) |
+| /api/auth/logout/                   | POST        | Delete (User Logout) |
+| /api/auth/user/                     | GET         | Read (Current User Details) |
+
+| /api/flashcards/                    | GET         | Read (List Flashcards) |
+|                                      | POST        | Create (Add New Flashcard) |
+| /api/flashcards/\<int:id\>/          | GET         | Read (Flashcard Details) |
+|                                      | PUT         | Update (Edit Flashcard) |
+|                                      | DELETE      | Delete (Remove Flashcard) |
+
+| /api/review-history/                | GET         | Read (List Review Sessions) |
+|                                      | POST        | Create (Save Review Result) |
+| /api/review-history/\<int:id\>/      | GET         | Read (Single Review Session) |
+|                                      | PUT         | Update (Update Review Session) |
+|                                      | DELETE      | Delete (Remove Review Session) |
 
 ## Bugs
 
