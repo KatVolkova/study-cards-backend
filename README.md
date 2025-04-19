@@ -17,7 +17,33 @@ The database schema was created with [dbdiagramm](https://dbdiagram.io/home)
 ## Database<br>
 A PostgreSQL provided by Code Institute has been used as relational database.<br>
 
-- **Relationships:**<br>
+- **Relationships:**  
+  - **User to Flashcard:** One-to-Many  
+  - **User to ReviewSession:** One-to-Many  
+  - **Flashcard to User:** Many-to-One  
+  - **ReviewSession to User:** Many-to-One  
+
+<br>
+
+### 📚 Entity Relationship Overview
+
+| **Entity**          | **Relation Type**         | **Description** |
+|:--------------------|:---------------------------|:----------------|
+| **User → Flashcard** | One user can create multiple flashcards. |
+| **User → ReviewSession** | One user can have multiple review sessions recorded. |
+| **Flashcard → User** | Each flashcard belongs to one user. |
+| **ReviewSession → User** | Each review session is associated with one user. |
+
+<br>
+
+### 🔎 Additional Notes
+- A user can **create, edit, and delete** their flashcards.
+- A user can **review** flashcards and **record** performance via review sessions.
+- Flashcards can be **filtered** by topic and learning status.
+- ReviewSessions **track** the history of completed study sessions including score and streak.
+
+
+
 
 ### Future Implementations
 
