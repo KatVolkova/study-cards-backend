@@ -40,7 +40,7 @@ The backend handles user authentication, data validation, and database interacti
 
 
 ## Live Page
-[StudyCards-backend]()
+![StudyCards-backend](./assets/screenshots/backend_message.png)
 
 ## Project Description
 
@@ -50,6 +50,8 @@ The backend handles user authentication, data validation, and database interacti
 ## Structure
 
 The database schema was created with [dbdiagramm](https://dbdiagram.io/home)
+
+![Diagram](./assets/screenshots/diagram.png)
 
 ## Database<br>
 A PostgreSQL provided by Code Institute has been used as relational database.<br>
@@ -82,7 +84,7 @@ A PostgreSQL provided by Code Institute has been used as relational database.<br
 
 A welcome message is displayed when you first enter the API site.
 
-![Screenshot of welcome message](documentation/welcome_api.png)<br>
+![Screenshot of welcome message](./assets/screenshots/backend_message.png)<br>
 
 ### Future Implementations
 
@@ -171,7 +173,7 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 
 ### Clone this repository
 1. Log in to GitHub.
-2. Navigate to the repository for this project by selecting StudyCards-backend](https://github.com/KatVolkova/study-cards-backend)
+2. Navigate to the repository for this project by selecting [StudyCards-backend](https://github.com/KatVolkova/study-cards-backend)
 3. In the top-right corner, click on the green *Code* button
 4. Copy the HTTPS URL in the tab *Local*
 5. Go to the code editor of your choice and open the terminal
