@@ -3,7 +3,6 @@ Return to the [StudyCards backend README.md](README.md).
 
 ## Index
 
-- [Return to Main README](#return-to-main-readme)
 - [Python Validator Testing](#python-validator-testing)
 - [Manual Testing (Backend)](#manual-testing-backend)
 - [Bugs](#bugs)

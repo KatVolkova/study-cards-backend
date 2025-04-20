@@ -252,6 +252,6 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 - [django-filter Documentation](https://django-filter.readthedocs.io/en/stable/) — Implemented for filtering flashcards by topic and status.
 - [DJ-REST-Auth Documentation](https://dj-rest-auth.readthedocs.io/en/latest/introduction.html) — Used for user registration and authentication setup.
 - [GBdjango-filter and DRF API filtering - Django REST Framework](https://www.youtube.com/watch?v=NDFgTGTI8zg) - used for better undertanding of filtering in Django
-- [Django Rest Framework for Beginners - Simple CRUD API](https://www.youtube.com/watch?v=OJdFj5hPAKs)
+- [Django Rest Framework for Beginners - Simple CRUD API](https://www.youtube.com/watch?v=OJdFj5hPAKs) - used to gain a better understanding of CRUD operations
 - [Stackoverflow](https://stackoverflow.com/) - used for general code advice
 - [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging along with other tools and coding advice
