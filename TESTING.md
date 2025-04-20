@@ -8,6 +8,17 @@ Return to the [project name README.md](README.md).
 
 - All created python files were checked with the [Code Insitute validator - CI Python Linter](https://pep8ci.herokuapp.com/#). <br>
 
+- Models.py file
+![models.py file](./assets/screenshots/validation/python_models.png)
+- Settings.py file
+![settings.py file](./assets/screenshots/validation/python_settings.png)
+- Serializers.py file
+![serializers.py file](./assets/screenshots/validation/python_serializers.png)
+- Viws.py file
+![views.py file](./assets/screenshots/validation/python_views.png)
+
+
+
 ### Manual Testing (Backend)
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
