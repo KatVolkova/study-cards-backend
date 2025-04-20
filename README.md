@@ -248,11 +248,10 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 ## References
 
 - [Django REST Framework Quickstart](https://www.django-rest-framework.org/tutorial/quickstart/) — Official tutorial for building APIs with DRF.
-- [Very Academy - Django REST Framework (YouTube Playlist)](https://www.youtube.com/playlist?list=PLLRM7ROnmA9F2KKU6JxqyMfD2-0J9I7u7) — Helpful for setting up serializers, views, and permissions.
 - [Simple JWT Documentation](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) — Used for authentication with token-based login.
-- [Corey Schafer - Django REST Framework Crash Course (YouTube)](https://www.youtube.com/watch?v=Uyei2iDA4Hs) — Explained CRUD API development clearly.
 - [django-filter Documentation](https://django-filter.readthedocs.io/en/stable/) — Implemented for filtering flashcards by topic and status.
-- [William Vincent - Django REST Framework Guide](https://wsvincent.com/django-rest-framework-tutorial/) — Practical advice on organizing Django REST projects.
 - [DJ-REST-Auth Documentation](https://dj-rest-auth.readthedocs.io/en/latest/introduction.html) — Used for user registration and authentication setup.
+- [GBdjango-filter and DRF API filtering - Django REST Framework](https://www.youtube.com/watch?v=NDFgTGTI8zg) - used for better undertanding of filtering in Django
+- [Django Rest Framework for Beginners - Simple CRUD API](https://www.youtube.com/watch?v=OJdFj5hPAKs)
 - [Stackoverflow](https://stackoverflow.com/) - used for general code advice
 - [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging along with other tools and coding advice
