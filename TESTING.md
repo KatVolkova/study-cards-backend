@@ -1,8 +1,12 @@
-Return to the [project name README.md](README.md).
+Return to the [StudyCards backend README.md](README.md).
 # Testing
 
 ## Index
 
+- [Return to Main README](#return-to-main-readme)
+- [Python Validator Testing](#python-validator-testing)
+- [Manual Testing (Backend)](#manual-testing-backend)
+- [Bugs](#bugs)
 
 ## Python Validator Testing
 
