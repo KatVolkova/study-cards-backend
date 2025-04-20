@@ -91,12 +91,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
-# CORS_ALLOWED_ORIGINS = [
-#    origin for origin in [
-#      os.environ.get('CLIENT_ORIGIN'),
-#      os.environ.get('CLIENT_ORIGIN_DEV')
-#    ] if origin
-#  ]
+
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -106,9 +101,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-# JWT_AUTH_COOKIE = 'my-app-auth'
-# JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
-# JWT_AUTH_SAMESITE = 'None'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
