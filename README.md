@@ -2,25 +2,52 @@
 
 The *StudyCards-backend* is the backend for the StudyCards application, built using Django Rest Framework. It has been designed for  ([StudyCards-frontend](https://study-cards-frontend-2200912dd99e.herokuapp.com/))<br>
 
-# 📚 StudyCards - Backend Overview
 
-The **StudyCards Backend** is a Django REST Framework application that powers the StudyCards flashcard learning platform.  
-It provides a secure and scalable API for managing user accounts, flashcards, and review history.  
+# Index
+
+- [StudyCards - Backend Overview](#studycards---backend-overview)
+- [Core Responsibilities](#core-responsibilities)
+- [Main Components](#main-components)
+- [Technologies Used](#technologies-used)
+- [Live Page](#live-page)
+- [Structure](#structure)
+- [Database](#database)
+  - [Entity Relationship Overview](#entity-relationship-overview)
+  - [Additional Notes](#additional-notes)
+- [Future Implementations](#future-implementations)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+  - [Browser Compatibility](#browser-compatibility)
+- [Deployment](#deployment)
+  - [Heroku](#heroku)
+  - [Local Deployment](#local-deployment)
+  - [Forking This Repository](#forking-this-github-repository)
+  - [Cloning This Repository](#clone-this-repository)
+  - [Creating PostgreSQL Database](#create-postgresql-using-code-institute-database-maker)
+- [Technologies Used (Detailed)](#technologies-used-detailed)
+  - [Languages](#languages)
+  - [Tools](#tools)
+
+
+# StudyCards - Backend Overview
+
+The **StudyCards Backend** is a Django REST Framework application that powers the StudyCards front-end app.  
+It provides an API for managing user accounts, flashcards, and review history.  
 The backend handles user authentication, data validation, and database interactions, ensuring smooth functionality for all front-end operations.
 
 ---
 
-## 🔧 Core Responsibilities
+##  Core Responsibilities
 - **User Authentication**: Handles secure user registration, login, logout, and session management using tokens.
 - **Flashcard Management**: Supports full CRUD (Create, Read, Update, Delete) operations for user-created flashcards.
 - **Review Tracking**: Records users' review sessions, including scores and learning streaks, to help track progress over time.
 - **API Provision**: Offers RESTful endpoints that are consumed by the StudyCards front-end.
 - **Authorization**: Ensures users can only access and manipulate their own data.
-- **Filtering and Pagination**: Provides filter options (e.g., by topic or status) and paginates flashcard/review history lists for efficiency.
+- **Filtering**: Provides filter options (e.g., by topic or status) for efficiency.
 
 ---
 
-## 🏛️ Main Components
+##  Main Components
 - **Flashcard Model**: Stores flashcard questions, answers, topics, statuses, and timestamps.
 - **ReviewHistory Model**: Tracks user review performance data such as score, total questions, correct answers, and streaks.
 - **User Authentication**: Built with `dj-rest-auth`, `django-allauth`, and token-based authentication.
@@ -29,7 +56,7 @@ The backend handles user authentication, data validation, and database interacti
 
 ---
 
-## ⚙️ Technologies Used
+##  Technologies Used
 - **Django** (Python Web Framework)
 - **Django REST Framework** (API Layer)
 - **PostgreSQL** (Production Database)
@@ -41,10 +68,6 @@ The backend handles user authentication, data validation, and database interacti
 
 ## Live Page
 ![StudyCards-backend](./assets/screenshots/backend_message.png)
-
-## Project Description
-
-### Main goals
 
 
 ## Structure
@@ -64,10 +87,10 @@ A PostgreSQL provided by Code Institute has been used as relational database.<br
 
 <br>
 
-### 📚 Entity Relationship Overview
+### Entity Relationship Overview
 
-| **Entity**          | **Relation Type**         | **Description** |
-|:--------------------|:---------------------------|:----------------|
+| **Entity**          | **Relation Type**         | 
+|:--------------------|:---------------------------|
 | **User → Flashcard** | One user can create multiple flashcards. |
 | **User → ReviewSession** | One user can have multiple review sessions recorded. |
 | **Flashcard → User** | Each flashcard belongs to one user. |
@@ -75,9 +98,9 @@ A PostgreSQL provided by Code Institute has been used as relational database.<br
 
 <br>
 
-### 🔎 Additional Notes
+###  Additional Notes
 - A user can **create, edit, and delete** their flashcards.
-- A user can **review** flashcards and **record** performance via review sessions.
+- A user can **review** flashcards.
 - Flashcards can be **filtered** by topic and learning status.
 - ReviewSessions **track** the history of completed study sessions including score and streak.
 
@@ -88,14 +111,14 @@ A welcome message is displayed when you first enter the API site.
 
 ### Future Implementations
 
-- **Spaced Repetition Algorithm:**  
-  Implement intelligent flashcard scheduling based on the user's previous review performance using algorithms like SM-2 (used in Anki) to optimize memory retention.
+- **Spaced Repetition:**  
+  Implement intelligent flashcard scheduling based on the user's previous review performance.
 
 - **User Statistics API:**  
   Provide additional API endpoints to deliver detailed analytics to users, such as learning streaks, mastery trends over time, flashcard creation rates, and review success percentages.
 
 - **Decks and Flashcard Grouping:**  
-  Allow users to create multiple decks (collections of flashcards) for better organization. Flashcards could be linked to decks through a ForeignKey, enabling deck-level filtering and review.
+  Allow users to create multiple decks (collections of flashcards) for better organisation.
 
 
 ## API Endpoints
@@ -108,13 +131,11 @@ The endpoints provided by the StudyCards API are:
 | /api/auth/login/                    | POST        | Create (User Login) |
 | /api/auth/logout/                   | POST        | Delete (User Logout) |
 | /api/auth/user/                     | GET         | Read (Current User Details) |
-
 | /api/flashcards/                    | GET         | Read (List Flashcards) |
 |                                      | POST        | Create (Add New Flashcard) |
 | /api/flashcards/\<int:id\>/          | GET         | Read (Flashcard Details) |
 |                                      | PUT         | Update (Edit Flashcard) |
 |                                      | DELETE      | Delete (Remove Flashcard) |
-
 | /api/review-history/                | GET         | Read (List Review Sessions) |
 |                                      | POST        | Create (Save Review Result) |
 | /api/review-history/\<int:id\>/      | GET         | Read (Single Review Session) |
@@ -128,7 +149,7 @@ The endpoints provided by the StudyCards API are:
 
 The app was tested regularly and deployed to Heroku to make sure both local and remote worked the same.
 
-The manual tests were conducted to ensure that the API operates smoothly and behaves as intended.
+The manual tests were conducted to ensure that the API operates and behaves as intended.
 <b>[Detailed manual testing is located here](/TESTING.md)</b>
 
 ### Browser Compatibility
@@ -155,7 +176,7 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 10. Add in the setting.py the Heroku app URL into ALLOWED HOSTS.
 11. Gather all static files of the project by using the command _python3 manage.py collectstatic_ in the terminal.
 12. Make sure that DEBUG=FALSE in settings.py.
-13. Create a _Procfile_ in the root directory and add web: gunicorn fv_api.wsgi.
+13. Create a _Procfile_ in the root directory.
 13. In Heroku enable the automatic deploy or manually deploy the code from the main branch.
 
 ### Local deployment
@@ -185,7 +206,7 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 2. Input your email address
 3. Paste the provided URL in as your DATABASE_URL value
 
-## Credits
+
 
 ## Technologies Used
 
@@ -219,8 +240,6 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 - [djangorestframework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html): JSON Web Token authentication for Django REST Framework.
 - [oauthlib](https://oauthlib.readthedocs.io/en/latest/): A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
 - [PyJWT](https://pyjwt.readthedocs.io/en/stable/): JSON Web Token implementation in Python.
-- [python3-openid](https://pypi.org/project/python3-openid/): A library for implementing OpenID in Python.
-- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/): OAuth library that implements the client side of the OAuth protocol.
 - [dj-database-url](https://pypi.org/project/dj-database-url/): A simple utility to allow using Database URLs in Django.
 - [whitenoise](https://whitenoise.readthedocs.io/en/latest/): A Django middleware to serve static files.
 
