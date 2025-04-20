@@ -2,6 +2,43 @@
 
 The *StudyCards-backend* is the backend for the StudyCards application, built using Django Rest Framework. It has been designed for  ([StudyCards-frontend](https://study-cards-frontend-2200912dd99e.herokuapp.com/))<br>
 
+# 📚 StudyCards - Backend Overview
+
+The **StudyCards Backend** is a Django REST Framework application that powers the StudyCards flashcard learning platform.  
+It provides a secure and scalable API for managing user accounts, flashcards, and review history.  
+The backend handles user authentication, data validation, and database interactions, ensuring smooth functionality for all front-end operations.
+
+---
+
+## 🔧 Core Responsibilities
+- **User Authentication**: Handles secure user registration, login, logout, and session management using tokens.
+- **Flashcard Management**: Supports full CRUD (Create, Read, Update, Delete) operations for user-created flashcards.
+- **Review Tracking**: Records users' review sessions, including scores and learning streaks, to help track progress over time.
+- **API Provision**: Offers RESTful endpoints that are consumed by the StudyCards front-end.
+- **Authorization**: Ensures users can only access and manipulate their own data.
+- **Filtering and Pagination**: Provides filter options (e.g., by topic or status) and paginates flashcard/review history lists for efficiency.
+
+---
+
+## 🏛️ Main Components
+- **Flashcard Model**: Stores flashcard questions, answers, topics, statuses, and timestamps.
+- **ReviewHistory Model**: Tracks user review performance data such as score, total questions, correct answers, and streaks.
+- **User Authentication**: Built with `dj-rest-auth`, `django-allauth`, and token-based authentication.
+- **Custom Views**: ViewSets and API Views allow users to manage their flashcards and review history through intuitive endpoints.
+- **Filtering**: Users can filter flashcards by topic or learning status, using `django-filters`.
+
+---
+
+## ⚙️ Technologies Used
+- **Django** (Python Web Framework)
+- **Django REST Framework** (API Layer)
+- **PostgreSQL** (Production Database)
+- **dj-rest-auth** (Authentication system)
+- **django-cors-headers** (CORS support for front-end communication)
+- **Heroku** (Deployment platform)
+- **Gunicorn** and **Whitenoise** (for production server and static file management)
+
+
 ## Live Page
 [StudyCards-backend]()
 
