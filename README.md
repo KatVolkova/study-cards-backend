@@ -26,7 +26,8 @@ The *StudyCards-backend* is the backend for the StudyCards application, built us
   - [Creating PostgreSQL Database](#create-postgresql-using-code-institute-database-maker)
 - [Technologies Used (Detailed)](#technologies-used-detailed)
   - [Languages](#languages)
-  - [Tools](#tools)
+  - [Tools](#tools).
+- [References](#references)
 
 
 # StudyCards - Backend Overview
@@ -244,7 +245,14 @@ This site is deployed using Heroku and all the steps for a success deployment ar
 - [whitenoise](https://whitenoise.readthedocs.io/en/latest/): A Django middleware to serve static files.
 
 
-### References
+## References
 
+- [Django REST Framework Quickstart](https://www.django-rest-framework.org/tutorial/quickstart/) — Official tutorial for building APIs with DRF.
+- [Very Academy - Django REST Framework (YouTube Playlist)](https://www.youtube.com/playlist?list=PLLRM7ROnmA9F2KKU6JxqyMfD2-0J9I7u7) — Helpful for setting up serializers, views, and permissions.
+- [Simple JWT Documentation](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) — Used for authentication with token-based login.
+- [Corey Schafer - Django REST Framework Crash Course (YouTube)](https://www.youtube.com/watch?v=Uyei2iDA4Hs) — Explained CRUD API development clearly.
+- [django-filter Documentation](https://django-filter.readthedocs.io/en/stable/) — Implemented for filtering flashcards by topic and status.
+- [William Vincent - Django REST Framework Guide](https://wsvincent.com/django-rest-framework-tutorial/) — Practical advice on organizing Django REST projects.
+- [DJ-REST-Auth Documentation](https://dj-rest-auth.readthedocs.io/en/latest/introduction.html) — Used for user registration and authentication setup.
 - [Stackoverflow](https://stackoverflow.com/) - used for general code advice
 - [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging along with other tools and coding advice
